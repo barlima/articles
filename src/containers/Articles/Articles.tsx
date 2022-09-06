@@ -1,14 +1,8 @@
-import React from 'react'
-import { useArticlesFetch } from '../../hooks'
+import React from "react";
+import { ArticlesContextProvider } from "../../context";
 
 export const Articles: React.FC = () => {
-  const { loading, articles } = useArticlesFetch('fashion')
-
-  console.log(articles)
-
   return (
-    <div>
-
-    </div>
-  )
-}
+    <ArticlesContextProvider>Content will be here</ArticlesContextProvider>
+  );
+};
