@@ -28,7 +28,7 @@ export const useArticlesFetch = (
       const data = await response.json();
       return data.articles;
     },
-    []
+    [articles]
   );
 
   const fetchArticles = useCallback(
@@ -64,10 +64,11 @@ export const useArticlesFetch = (
         setLoading(false);
       }
     },
-    []
+    [cacheOrFetch]
   );
 
   useEffect(() => {
+    console.log(category)
     fetchArticles(category);
   }, [category]);
 

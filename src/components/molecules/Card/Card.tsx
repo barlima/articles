@@ -59,6 +59,7 @@ const Body = styled.div`
   border-left: none;
   padding: var(--space-s) var(--space-m);
   width: 100%;
+  overflow: hidden;
 `;
 
 const ImageWrapper = styled.div`

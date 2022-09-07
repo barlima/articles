@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { breakpoints } from "./breakpoints";
 
 export const GlobalStyle = createGlobalStyle`
   :root {
@@ -27,27 +28,33 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    font-size: 64px;
+    font-size: 32px;
+    @media ${breakpoints.size.m} { font-size: 64px; }
   }
 
   h2 {
-    font-size: 32px;
+    font-size: 20px;
+    @media ${breakpoints.size.m} { font-size: 32px; }
   }
 
   h3 {
-    font-size: 24px;
+    font-size: 18px;
+    @media ${breakpoints.size.m} { font-size: 24px; }
   }
 
   h4 {
-    font-size: 20px;
+    font-size: 16px;
+    @media ${breakpoints.size.m} { font-size: 20px; }
   }
 
   h5 {
-    font-size: 16px;
+    font-size: 12px;
+    @media ${breakpoints.size.m} { font-size: 16px; }
   }
 
   h6 {
-    font-size: 14px;
+    font-size: 10px;
+    @media ${breakpoints.size.m} { font-size: 14px; }
   }
 
   h1, h2, h3, h4, h5, h6, p {
