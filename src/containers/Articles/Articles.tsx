@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+
 import { Card } from "../../components/molecules";
-import { ArticlesContextProvider, useArticlesContext } from "../../context";
+import { useArticlesContext } from "../../context";
 
 export const Articles: React.FC = () => {
   const { articles } = useArticlesContext();
