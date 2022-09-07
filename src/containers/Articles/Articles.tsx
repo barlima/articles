@@ -1,8 +1,28 @@
 import React from "react";
-import { ArticlesContextProvider } from "../../context";
+import styled from "styled-components";
+import { Card } from "../../components/molecules";
+import { ArticlesContextProvider, useArticlesContext } from "../../context";
 
 export const Articles: React.FC = () => {
+  const { articles } = useArticlesContext();
+
   return (
-    <ArticlesContextProvider>Content will be here</ArticlesContextProvider>
+    <Root>
+      {articles.map((article) => (
+        <Card
+          key={article.id}
+          title={article.title}
+          description={article.preamble}
+          date={article.date}
+          image={article.image}
+        />
+      ))}
+    </Root>
   );
 };
+
+const Root = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+`;

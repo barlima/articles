@@ -1,4 +1,4 @@
-import { createContext, PropsWithChildren, useState } from "react";
+import { createContext, PropsWithChildren, useContext, useState } from "react";
 import { useArticlesFetch } from "../hooks";
 import { Article } from "../types/Article";
 import { ArticleCategory } from "../types/ArticleCategory";
@@ -36,7 +36,7 @@ export const ArticlesContextProvider: React.FC<PropsWithChildren> = ({
   return (
     <ArticlesContext.Provider
       value={{
-        articles: allArticles,
+        articles: category ? articles[category] : allArticles,
         category,
         loading,
         error,
@@ -46,3 +46,5 @@ export const ArticlesContextProvider: React.FC<PropsWithChildren> = ({
     </ArticlesContext.Provider>
   );
 };
+
+export const useArticlesContext = () => useContext(ArticlesContext);

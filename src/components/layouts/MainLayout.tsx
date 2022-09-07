@@ -7,5 +7,6 @@ export const MainLayout: React.FC<PropsWithChildren> = ({ children }) => {
 
 const Root = styled.div`
   max-width: 1024px;
-  margin: var(--space-l) auto ;
+  margin: var(--space-l) auto;
+  padding: 0 var(--space-m) var(--space-m);
 `;

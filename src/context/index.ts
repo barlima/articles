@@ -1,1 +1,1 @@
-export { ArticlesContextProvider } from './articlesContext'
+export { ArticlesContextProvider, useArticlesContext } from './articlesContext'

@@ -25,7 +25,8 @@ export const useArticlesFetch = (
       }
 
       const response = await fetch(`${API_URL}/articles/${articleCategory}`);
-      return await response.json();
+      const data = await response.json();
+      return data.articles;
     },
     []
   );
@@ -43,7 +44,7 @@ export const useArticlesFetch = (
           ]);
 
           setArticles({
-            fashion,
+            fashion: fashion,
             sports,
           });
 
@@ -67,7 +68,6 @@ export const useArticlesFetch = (
   );
 
   useEffect(() => {
-    console.log(category);
     fetchArticles(category);
   }, [category]);
 

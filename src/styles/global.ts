@@ -5,6 +5,9 @@ export const GlobalStyle = createGlobalStyle`
     --color-white: #eaeaea;
     --color-dark: #1a1a1a;
     --color-black: #000;
+    --color-grey: #777;
+    --color-accent: #cc2211;
+    --color-shadow: rgba(200, 200, 200, 0.4);
 
     --space-s: 8px;
     --space-m: 16px;
@@ -45,6 +48,10 @@ export const GlobalStyle = createGlobalStyle`
 
   h6 {
     font-size: 14px;
+  }
+
+  h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
   }
 
   #root {

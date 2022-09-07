@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Articles } from "../containers/Articles";
 import { Filter } from "../containers/Filter";
 import { Sorting } from "../containers/Sorting";
+import { ArticlesContextProvider } from "../context";
 
 export const HomePage: React.FC = () => {
   return (
@@ -10,9 +11,11 @@ export const HomePage: React.FC = () => {
       <h1>Articles</h1>
 
       <Root>
-        <Sorting />
-        <Filter />
-        <Articles />
+        <ArticlesContextProvider>
+          <Sorting />
+          <Filter />
+          <Articles />
+        </ArticlesContextProvider>
       </Root>
     </div>
   );
@@ -21,4 +24,4 @@ export const HomePage: React.FC = () => {
 const Root = styled.div`
   display: flex;
   flex-wrap: wrap;
-`
+`;
