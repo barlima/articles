@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
+import styled from "styled-components";
+import { ErrorLayout } from "../components/layouts/ErrorLayout";
 
-export const ErrorPage: React.FC = () => {
-  return (
-    <div>500 - Something went wrong</div>
-  )
-}
+export const ErrorPage: React.FC = () => (
+  <ErrorLayout title="500" message="Something went wrong" />
+);

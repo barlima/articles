@@ -53,6 +53,10 @@ export const useArticlesFetch = (
 
         const data = await cacheOrFetch(articleCategory);
 
+        if (!data) {
+          throw new Error()
+        }
+
         setArticles((current) => ({
           ...current,
           [articleCategory]: data,
@@ -68,7 +72,6 @@ export const useArticlesFetch = (
   );
 
   useEffect(() => {
-    console.log(category)
     fetchArticles(category);
   }, [category]);
 
