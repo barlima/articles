@@ -30,7 +30,10 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    headers: {
+      "Access-Control-Allow-Origin": "*"
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -39,7 +42,7 @@ module.exports = {
     new webpack.DefinePlugin({
       process: {
         env: {
-          REACT_APP_API_URI: JSON.stringify("http://localhost:6010"),
+          REACT_APP_API_URI: JSON.stringify("http://3.75.18.229:6010"),
         },
       },
     }),
