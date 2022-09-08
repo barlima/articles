@@ -63,9 +63,15 @@ const Body = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-  min-width: 200px;
-  width: 200px;
-  min-height: 200px;
+  min-width: 120px;
+  width: 120px;
+  min-height: 120px;
+
+  @media ${breakpoints.size.m} {
+    min-width: 200px;
+    width: 200px;
+    min-height: 200px;
+  }
 `;
 
 const Description = styled.div`
